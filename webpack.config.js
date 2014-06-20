@@ -1,11 +1,14 @@
 module.exports = {
-  entry: "./app/main.js",
+  entry: "./app/main.coffee",
   output: {
     filename: "public/bundle.js"
   },
   module: {
     loaders: [
-      {test: /\.js$/, loader: 'jsx-loader'}
+      {test: /\.coffee$/, loader: 'coffee'}
     ]
+  },
+  resolve: {
+    extensions: ["", ".js", ".coffee"]
   }
 };
